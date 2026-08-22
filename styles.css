@@ -246,7 +246,7 @@ html.dark .bg-grid {
     border-top: 1px solid var(--border-color);
     padding-top: 0.4rem;
     margin-top: 0.15rem;
-    gap: 0.25rem;
+    gap: 0.3rem;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -254,11 +254,11 @@ html.dark .bg-grid {
     display: none;
   }
   .nav-item {
-    font-size: 0.74rem;
+    font-size: 0.72rem;
     white-space: nowrap;
   }
   .nav-item span {
-    font-size: 0.68rem;
+    font-size: 0.66rem;
   }
 }
 
