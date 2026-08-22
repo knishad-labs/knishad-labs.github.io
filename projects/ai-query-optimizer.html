@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>AI Query Optimizer — knishad.labs</title>
+  <meta name="description" content="AI Query Optimizer Engine by Kamal Nishad. AST SQL Parser, Index Heuristics, and Execution Plan Visualizer.">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main CSS Stylesheet -->
+  <link rel="stylesheet" href="../styles.css?v=300">
+</head>
+<body>
+
+  <!-- Background Grid Pattern -->
+  <div class="bg-grid"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">knishad.labs</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="../index.html#projects" class="nav-item">← Back to Lab Projects</a>
+      </nav>
+
+      <div class="nav-right">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Theme">
+          <span id="themeIcon">☀️</span>
+          <span id="themeText">Light</span>
+        </button>
+
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span class="status-text">R&D Active</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project Detail Hero -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="tag-badge">DBA & AI TOOLING ENGINE</div>
+      <h1 class="hero-title">AI Query Optimizer Studio</h1>
+      <p class="hero-subtitle">
+        An intelligent database query optimization engine using Abstract Syntax Tree (AST) parsing, indexing heuristics, and execution plan simulation built by Kamal Nishad.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://github.com/knishad-labs/ai-query-optomizer" target="_blank" rel="noopener" class="btn btn-primary">View Source Code on GitHub ↗</a>
+        <a href="../index.html#contact" class="btn btn-secondary">Inquire / Benchmark Project</a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <div class="metric-value">PostgreSQL</div>
+          <div class="metric-label">Target Engine</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">Go + AST</div>
+          <div class="metric-label">Parser Architecture</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">3.8x</div>
+          <div class="metric-label">Avg Speedup Impact</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Architecture Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">[SYSTEM ARCHITECTURE]</div>
+        <h2 class="section-title">Engine Overview & Design</h2>
+        <p class="section-desc">How the optimizer parses SQL syntax, analyzes execution costs, and generates index recommendations.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h3>Core Technical Capabilities</h3>
+          <ul style="margin-top: 1rem; line-height: 1.8; font-size: 0.95rem; color: var(--text-secondary);">
+            <li><strong>1. AST Static SQL Parser:</strong> Tokenizes and converts raw SQL strings into syntax tree nodes without executing queries on production databases.</li>
+            <li><strong>2. Sequential Scan Elimination:</strong> Detects unindexed JOIN predicates and WHERE filters to generate partial and composite B-Tree DDL statements.</li>
+            <li><strong>3. Execution Plan Tree Visualizer:</strong> Renders visual EXPLAIN nodes (Nested Loop, Hash Join, Index Scan) for clear DBA diagnostics.</li>
+            <li><strong>4. Non-Destructive Refactoring:</strong> Guarantees syntactic equivalence when rewriting subqueries into Common Table Expressions (CTEs).</li>
+          </ul>
+        </div>
+
+        <div class="contact-details" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: 8px; border: 1px solid var(--border-color);">
+          <h3>Tech Stack & Dependencies</h3>
+          <div class="project-tags" style="margin-top: 1rem;">
+            <span class="tag">PostgreSQL 15+</span>
+            <span class="tag">Go 1.22</span>
+            <span class="tag">pg_query_go</span>
+            <span class="tag">gRPC</span>
+            <span class="tag">Docker</span>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.88rem; color: var(--text-secondary);">
+            Built as part of Kamal Nishad's DBA & Infrastructure R&D lab to automate query performance analysis and schema index generation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="brand-name">knishad.labs</span> — PostgreSQL DBA & Systems Platform
+      </div>
+      <div class="footer-right">
+        <span>© 2026 Kamal Nishad. Built with HTML, CSS & JS.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../app.js?v=300"></script>
+</body>
+</html>

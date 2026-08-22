@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Scheduler Service — knishad.labs</title>
+  <meta name="description" content="Distributed Task Scheduling Microservice in Go by Kamal Nishad. Distributed locks, cron schedules, and gRPC APIs.">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main CSS Stylesheet -->
+  <link rel="stylesheet" href="../styles.css?v=300">
+</head>
+<body>
+
+  <!-- Background Grid Pattern -->
+  <div class="bg-grid"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">knishad.labs</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="../index.html#projects" class="nav-item">← Back to Lab Projects</a>
+      </nav>
+
+      <div class="nav-right">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Theme">
+          <span id="themeIcon">☀️</span>
+          <span id="themeText">Light</span>
+        </button>
+
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span class="status-text">R&D Active</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project Detail Hero -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="tag-badge">DISTRIBUTED GO MICROSERVICE</div>
+      <h1 class="hero-title">Scheduler Service</h1>
+      <p class="hero-subtitle">
+        A high-concurrency, fault-tolerant task scheduling microservice written in Go for managing cron jobs, one-shot timers, and distributed locks built by Kamal Nishad.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://github.com/knishad-labs/ai-query-optomizer/tree/main/backend/scheduler-service" target="_blank" rel="noopener" class="btn btn-primary">View Source Code on GitHub ↗</a>
+        <a href="../index.html#contact" class="btn btn-secondary">Inquire / Benchmark Microservice</a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <div class="metric-value">Go 1.22</div>
+          <div class="metric-label">Language Runtime</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">Distributed</div>
+          <div class="metric-label">Lock Mechanism</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">gRPC</div>
+          <div class="metric-label">API Interface</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Architecture Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">[SYSTEM ARCHITECTURE]</div>
+        <h2 class="section-title">Engine Overview & Design</h2>
+        <p class="section-desc">How the Scheduler service manages distributed task execution, worker pools, and failover locks.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h3>Core Technical Capabilities</h3>
+          <ul style="margin-top: 1rem; line-height: 1.8; font-size: 0.95rem; color: var(--text-secondary);">
+            <li><strong>1. Cron & Timer Engines:</strong> Supports standard 5-field cron syntax and dynamic one-shot timers with millisecond precision.</li>
+            <li><strong>2. Distributed Locking:</strong> Prevents duplicate job execution across multi-instance Kubernetes pods using database advisory locks.</li>
+            <li><strong>3. Bounded Worker Pools:</strong> Non-blocking goroutine channels process thousands of concurrent scheduled tasks safely without memory leaks.</li>
+            <li><strong>4. Graceful Shutdown & Recovery:</strong> Context cancellation handlers safely persist job state before container teardowns.</li>
+          </ul>
+        </div>
+
+        <div class="contact-details" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: 8px; border: 1px solid var(--border-color);">
+          <h3>Tech Stack & Dependencies</h3>
+          <div class="project-tags" style="margin-top: 1rem;">
+            <span class="tag">Go</span>
+            <span class="tag">Distributed Cron</span>
+            <span class="tag">PostgreSQL Lock</span>
+            <span class="tag">gRPC</span>
+            <span class="tag">Kubernetes</span>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.88rem; color: var(--text-secondary);">
+            Built for enterprise systems requiring high-reliability background task execution and distributed locking.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="brand-name">knishad.labs</span> — PostgreSQL DBA & Systems Platform
+      </div>
+      <div class="footer-right">
+        <span>© 2026 Kamal Nishad. Built with HTML, CSS & JS.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../app.js?v=300"></script>
+</body>
+</html>
