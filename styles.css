@@ -214,50 +214,51 @@ html.dark .bg-grid {
   flex-shrink: 0;
 }
 
+/* Clean Responsive Mobile Navbar */
 @media (max-width: 768px) {
   .navbar {
-    padding: 0.6rem 0;
+    padding: 0.55rem 0;
   }
   .nav-container {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-    gap: 0.5rem 1rem;
-    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.85rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
   .brand {
-    font-size: 1rem;
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .nav-right {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: end;
-  }
-  .nav-links {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    width: 100%;
-    justify-content: space-between;
-    border-top: 1px solid var(--border-color);
-    padding-top: 0.45rem;
-    margin-top: 0.15rem;
-    gap: 0.5rem;
-  }
-  .nav-item {
-    font-size: 0.78rem;
-  }
-  .nav-item span {
-    font-size: 0.7rem;
+    font-size: 0.98rem;
   }
   .status-badge {
     display: none !important;
   }
   .theme-toggle-btn {
-    padding: 0.25rem 0.6rem;
-    font-size: 0.7rem;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.72rem;
     min-height: 28px;
+  }
+  .nav-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.4rem;
+    margin-top: 0.15rem;
+    gap: 0.25rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-item {
+    font-size: 0.74rem;
+    white-space: nowrap;
+  }
+  .nav-item span {
+    font-size: 0.68rem;
   }
 }
 
