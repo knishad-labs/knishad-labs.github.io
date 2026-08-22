@@ -79,9 +79,36 @@ html, body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
+.bg-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  pointer-events: none;
+  z-index: 0;
+}
+
 html.light .bg-grid {
   background-image: none !important;
   background-color: #ffffff !important;
+}
+
+html.dark .bg-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  position: relative;
+  z-index: 1;
 }
 
 .navbar {
