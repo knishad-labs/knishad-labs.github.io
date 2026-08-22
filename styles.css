@@ -1,6 +1,6 @@
-/* ==========================================================================
-   knishad.labs — 100% Guaranteed Pure White Background & Pitch Black Text
-   ========================================================================== */
+.hidden {
+  display: none !important;
+}
 
 :root {
   --bg-primary: #ffffff;
@@ -29,7 +29,6 @@
   --transition-normal: 0.25s ease;
 }
 
-/* Reset & Base */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -48,7 +47,6 @@ html, body {
   width: 100%;
 }
 
-/* Subtle Light Grid Pattern */
 .bg-grid {
   position: fixed;
   top: 0;
@@ -63,7 +61,6 @@ html, body {
   z-index: 0;
 }
 
-/* Container */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -73,7 +70,6 @@ html, body {
   z-index: 1;
 }
 
-/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -166,7 +162,6 @@ html, body {
   flex-shrink: 0;
 }
 
-/* Mobile Top Navbar */
 @media (max-width: 768px) {
   .navbar {
     padding: 0.5rem 0;
@@ -210,7 +205,6 @@ html, body {
   }
 }
 
-/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -251,7 +245,6 @@ html, body {
   width: 100%;
 }
 
-/* Hero Section */
 .hero-section {
   padding: 3.5rem 0 2.5rem;
   border-bottom: 1px solid var(--border-color);
@@ -339,7 +332,6 @@ html, body {
   color: #71717a !important;
 }
 
-/* Sections General */
 .section {
   padding: 3.5rem 0;
   border-bottom: 1px solid var(--border-color);
@@ -376,7 +368,6 @@ html, body {
   font-size: 0.9rem;
 }
 
-/* R&D Projects Cards */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -470,7 +461,6 @@ html, body {
   color: #0284c7 !important;
 }
 
-/* Ideas & Notes */
 .filter-bar {
   display: flex;
   align-items: center;
@@ -604,7 +594,6 @@ html, body {
   color: #0284c7 !important;
 }
 
-/* Contact Section */
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -707,7 +696,6 @@ html, body {
   border: 1px solid rgba(5, 150, 105, 0.25);
 }
 
-/* Footer */
 .footer {
   padding: 1.75rem 0;
   border-top: 1px solid var(--border-color);
@@ -724,7 +712,6 @@ html, body {
   gap: 0.65rem;
 }
 
-/* Modal */
 .modal {
   position: fixed;
   top: 0;
