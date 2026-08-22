@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>PostgreSQL DBA Course & Production Field Guide — knishad.labs</title>
+  <meta name="description" content="Complete PostgreSQL DBA & Performance Architecture Course by Kamal Nishad. PostgreSQL internals, B-Tree indexing, autovacuum tuning, and replication.">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main CSS Stylesheet -->
+  <link rel="stylesheet" href="../styles.css?v=300">
+</head>
+<body>
+
+  <!-- Background Grid Pattern -->
+  <div class="bg-grid"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">knishad.labs</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="../index.html#courses" class="nav-item">← Back to Courses & Guides</a>
+      </nav>
+
+      <div class="nav-right">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Theme">
+          <span id="themeIcon">☀️</span>
+          <span id="themeText">Light</span>
+        </button>
+
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span class="status-text">R&D Active</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="tag-badge">POSTGRESQL DBA COURSE & FIELD GUIDE</div>
+      <h1 class="hero-title">PostgreSQL DBA & Performance Architecture</h1>
+      <p class="hero-subtitle">
+        A comprehensive production-grade course and field guide covering PostgreSQL internals, query performance tuning, index architecture, autovacuum maintenance, and high-availability replication — <strong>Engineered & Authored by Kamal Nishad</strong>.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#syllabus" class="btn btn-primary">Explore Course Syllabus ↓</a>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact / Join DBA Cohort</a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <div class="metric-value">4 Modules</div>
+          <div class="metric-label">Structured Syllabus</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">PostgreSQL 16</div>
+          <div class="metric-label">Production Engine</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">Hands-on</div>
+          <div class="metric-label">DBA Scripts & Runbooks</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Syllabus Section -->
+  <section id="syllabus" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">[COURSE SYLLABUS]</div>
+        <h2 class="section-title">Structured Learning Modules</h2>
+        <p class="section-desc">From core database process architecture to emergency production incident response.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Module 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">⚙️</span>
+            <span class="project-type">Module 01</span>
+          </div>
+          <h3 class="project-title">PostgreSQL Internals & Memory Architecture</h3>
+          <p class="project-desc">Understanding backend process architecture, Shared Buffers, Write-Ahead Logging (WAL), checkpointing, and page-level storage layout.</p>
+          <div class="project-tags">
+            <span class="tag">Shared Buffers</span>
+            <span class="tag">WAL Engine</span>
+            <span class="tag">Checkpoints</span>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🔍</span>
+            <span class="project-type">Module 02</span>
+          </div>
+          <h3 class="project-title">Index Architecture & Sequential Scan Elimination</h3>
+          <p class="project-desc">Mastering B-Tree, GIN, and GiST indexes. Designing composite index column ordering, partial indexes, and analyzing EXPLAIN ANALYZE execution plans.</p>
+          <div class="project-tags">
+            <span class="tag">B-Tree Indexes</span>
+            <span class="tag">Partial Index</span>
+            <span class="tag">EXPLAIN ANALYZE</span>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🛠️</span>
+            <span class="project-type">Module 03</span>
+          </div>
+          <h3 class="project-title">Autovacuum Tuning, Locks & Wraparound Emergency</h3>
+          <p class="project-desc">Managing table bloat, autovacuum scale factors, lock tree analysis (pg_locks), and handling Transaction ID (XID) wraparound emergencies.</p>
+          <div class="project-tags">
+            <span class="tag">Autovacuum</span>
+            <span class="tag">pg_locks</span>
+            <span class="tag">XID Wraparound</span>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🔄</span>
+            <span class="project-type">Module 04</span>
+          </div>
+          <h3 class="project-title">Replication, High Availability & Disaster Recovery</h3>
+          <p class="project-desc">Configuring physical streaming replication, synchronous vs asynchronous modes, Patroni failover clusters, and pgBackRest point-in-time recovery (PITR).</p>
+          <div class="project-tags">
+            <span class="tag">Streaming Replication</span>
+            <span class="tag">Patroni</span>
+            <span class="tag">pgBackRest</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="brand-name">knishad.labs</span> — PostgreSQL DBA & Systems Platform
+      </div>
+      <div class="footer-right">
+        <span>© 2026 Kamal Nishad. Built with HTML, CSS & JS.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../app.js?v=300"></script>
+</body>
+</html>

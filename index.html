@@ -30,8 +30,9 @@
 
       <nav class="nav-links">
         <a href="#projects" class="nav-item"><span>[01]</span> Projects</a>
-        <a href="#ideas" class="nav-item"><span>[02]</span> Notes & Ideas</a>
-        <a href="#contact" class="nav-item"><span>[03]</span> Contact</a>
+        <a href="#ideas" class="nav-item"><span>[02]</span> Notes</a>
+        <a href="#courses" class="nav-item"><span>[03]</span> Courses & Guides</a>
+        <a href="#contact" class="nav-item"><span>[04]</span> Contact</a>
       </nav>
 
       <div class="nav-right">
@@ -60,17 +61,21 @@
 
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">Explore Projects Showcase ↓</a>
-        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        <a href="#courses" class="btn btn-secondary">Browse Courses & Field Guides</a>
       </div>
 
       <div class="hero-metrics">
         <div class="metric-card">
-          <div class="metric-value">PostgreSQL</div>
-          <div class="metric-label">DBA & Administration</div>
+          <a href="courses/postgres-dba.html" style="text-decoration: none; color: inherit;">
+            <div class="metric-value">PostgreSQL</div>
+            <div class="metric-label">DBA & Administration →</div>
+          </a>
         </div>
         <div class="metric-card">
-          <div class="metric-value">Kubernetes</div>
-          <div class="metric-label">Databases on K8s</div>
+          <a href="courses/crunchy-postgres-k8s.html" style="text-decoration: none; color: inherit;">
+            <div class="metric-value">Kubernetes</div>
+            <div class="metric-label">Databases on K8s →</div>
+          </a>
         </div>
         <div class="metric-card">
           <div class="metric-value">Linux & Go</div>
@@ -143,7 +148,7 @@
             <span class="tag">REST API</span>
           </div>
           <div class="project-footer">
-            <a href="https://github.com/knishad-labs/ai-query-optomizer/tree/main/backend/config-service" target="_blank" rel="noopener" class="project-link">Explore Code →</a>
+            <a href="https://github.com/knishad-labs/ai-query-optomizer/tree/main/backend/config-service" target="_blank" rel="noopener" class="project-link">View Repository →</a>
           </div>
         </div>
 
@@ -162,7 +167,7 @@
             <span class="tag">Queues</span>
           </div>
           <div class="project-footer">
-            <a href="https://github.com/knishad-labs/ai-query-optomizer/tree/main/backend/notification-service" target="_blank" rel="noopener" class="project-link">Explore Code →</a>
+            <a href="https://github.com/knishad-labs/ai-query-optomizer/tree/main/backend/notification-service" target="_blank" rel="noopener" class="project-link">View Repository →</a>
           </div>
         </div>
       </div>
@@ -240,12 +245,82 @@
     </div>
   </section>
 
-  <!-- [03] Contact Section -->
+  <!-- [03] Database Courses & Field Guides Section -->
+  <section id="courses" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">[03] COURSES & FIELD GUIDES</div>
+        <h2 class="section-title">PostgreSQL DBA & Systems Courses</h2>
+        <p class="section-desc">Structured step-by-step courses and production field guides on PostgreSQL DBA, Crunchy Postgres on Kubernetes, and Linux infrastructure by Kamal Nishad.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Course Card 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🐘</span>
+            <span class="project-type">DBA Course</span>
+          </div>
+          <h3 class="project-title">PostgreSQL DBA & Performance Architecture</h3>
+          <p class="project-desc">Complete end-to-end guide covering PostgreSQL internals, shared buffers, WAL logs, B-Tree index optimization, lock contention, and autovacuum tuning.</p>
+          <div class="project-tags">
+            <span class="tag">PostgreSQL 16</span>
+            <span class="tag">Indexing</span>
+            <span class="tag">Autovacuum</span>
+            <span class="tag">Replication</span>
+          </div>
+          <div class="project-footer">
+            <a href="courses/postgres-dba.html" class="project-link">Explore Full Course Syllabus →</a>
+          </div>
+        </div>
+
+        <!-- Course Card 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">☸️</span>
+            <span class="project-type">Kubernetes Course</span>
+          </div>
+          <h3 class="project-title">Crunchy Postgres on Kubernetes (Cloud-Native DB)</h3>
+          <p class="project-desc">Production deployment manual for running high-availability PostgreSQL on Kubernetes using Crunchy Data PGO operator, StatefulSets, pgBackRest, and zero-downtime failover.</p>
+          <div class="project-tags">
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Crunchy PGO</span>
+            <span class="tag">pgBackRest</span>
+            <span class="tag">High Availability</span>
+          </div>
+          <div class="project-footer">
+            <a href="courses/crunchy-postgres-k8s.html" class="project-link">Explore Full Course Syllabus →</a>
+          </div>
+        </div>
+
+        <!-- Course Card 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🐧</span>
+            <span class="project-type">Systems Course</span>
+          </div>
+          <h3 class="project-title">Linux Systems & Database Kernel Tuning</h3>
+          <p class="project-desc">Mastering Linux infrastructure for database workloads: sysctl parameters, hugepages, disk I/O schedulers, memory cgroups, and storage performance tuning.</p>
+          <div class="project-tags">
+            <span class="tag">Linux</span>
+            <span class="tag">Kernel Sysctl</span>
+            <span class="tag">Storage I/O</span>
+            <span class="tag">Memory Tuning</span>
+          </div>
+          <div class="project-footer">
+            <a href="courses/postgres-dba.html" class="project-link">Explore Full Course Syllabus →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [04] Contact Section -->
   <section id="contact" class="section">
     <div class="container">
       <div class="contact-wrapper">
         <div class="contact-info">
-          <div class="section-tag">[03] GET IN TOUCH</div>
+          <div class="section-tag">[04] GET IN TOUCH</div>
           <h2 class="section-title">Collaborate with knishad.labs</h2>
           <p class="contact-text">
             Interested in PostgreSQL DBA, Kubernetes database deployment, Linux infrastructure, or Go microservices? Send a direct message to the lab.
