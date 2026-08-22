@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>knishad.labs — Personal R&D Lab, Database Systems & Project Showcase</title>
-  <meta name="description" content="knishad.labs — Personal R&D Lab, Database Systems & Project Showcase by Kamal Nishad. Featuring AI Query Optimization, Go Microservices, and Software Engineering.">
+  <title>knishad.labs — PostgreSQL DBA & Systems Lab by Kamal Nishad</title>
+  <meta name="description" content="knishad.labs — PostgreSQL DBA & Systems Lab by Kamal Nishad — PostgreSQL, Databases on Kubernetes, Linux, and Go Microservices.">
   
   <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
       </a>
 
       <nav class="nav-links">
-        <a href="#sandbox" class="nav-item"><span>[01]</span> SQL Sandbox</a>
+        <a href="#sandbox" class="nav-item"><span>[01]</span> Sandbox</a>
         <a href="#projects" class="nav-item"><span>[02]</span> Projects</a>
         <a href="#ideas" class="nav-item"><span>[03]</span> Notes & Ideas</a>
         <a href="#contact" class="nav-item"><span>[04]</span> Contact</a>
@@ -44,10 +44,10 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
-      <div class="tag-badge">PERSONAL R&D LAB</div>
-      <h1 class="hero-title">Personal R&D Lab, Database Systems & Project Showcase.</h1>
+      <div class="tag-badge">POSTGRESQL DBA & SYSTEMS LAB</div>
+      <h1 class="hero-title">knishad.labs</h1>
       <p class="hero-subtitle">
-        Building intelligent software tools, database performance engines, Go backend microservices, and experimental tech projects by Kamal Nishad.
+        PostgreSQL DBA & Systems Lab by Kamal Nishad — PostgreSQL, Databases on Kubernetes, Linux, and Go Microservices.
       </p>
 
       <div class="hero-actions">
@@ -57,16 +57,16 @@
 
       <div class="hero-metrics">
         <div class="metric-card">
-          <div class="metric-value">Databases</div>
-          <div class="metric-label">PostgreSQL & DB Systems</div>
+          <div class="metric-value">PostgreSQL</div>
+          <div class="metric-label">DBA & Administration</div>
         </div>
         <div class="metric-card">
-          <div class="metric-value">Go / Systems</div>
-          <div class="metric-label">Backend Microservices</div>
+          <div class="metric-value">Kubernetes</div>
+          <div class="metric-label">Databases on K8s</div>
         </div>
         <div class="metric-card">
-          <div class="metric-value">AI Tools</div>
-          <div class="metric-label">Intelligent Query Optimizer</div>
+          <div class="metric-value">Linux & Go</div>
+          <div class="metric-label">Systems & Microservices</div>
         </div>
       </div>
     </div>
@@ -296,17 +296,17 @@
       <div class="section-header">
         <div class="section-tag">[03] NOTES & IDEAS</div>
         <h2 class="section-title">Technical Notes & Field Guides</h2>
-        <p class="section-desc">Articles on database tuning, backend architecture, and software engineering insights.</p>
+        <p class="section-desc">Articles on PostgreSQL DBA, Crunchy Postgres on Kubernetes, Linux tuning, and Go microservices.</p>
       </div>
 
       <!-- Search & Filter Controls -->
       <div class="filter-bar">
-        <input type="text" id="ideaSearchInput" class="search-input" placeholder="Search notes or keywords (e.g. PostgreSQL, Indexing, Go)...">
+        <input type="text" id="ideaSearchInput" class="search-input" placeholder="Search notes or keywords (e.g. Postgres, Kubernetes, Linux, Go)...">
         <div class="filter-tags">
           <button class="filter-btn active" data-filter="all">All Topics</button>
-          <button class="filter-btn" data-filter="SQL">Databases</button>
-          <button class="filter-btn" data-filter="Go">Go & Systems</button>
-          <button class="filter-btn" data-filter="AI">AI Architecture</button>
+          <button class="filter-btn" data-filter="SQL">PostgreSQL DBA</button>
+          <button class="filter-btn" data-filter="K8s">Kubernetes & Linux</button>
+          <button class="filter-btn" data-filter="Go">Go Microservices</button>
         </div>
       </div>
 
@@ -321,38 +321,38 @@
           <h3 class="idea-title">Eliminating Sequential Scans in PostgreSQL at Scale</h3>
           <p class="idea-snippet">Understanding B-Tree indexing, composite index ordering, and partial indexes to boost query execution speed by 10x.</p>
           <div class="idea-footer">
-            <span class="tag">SQL</span>
             <span class="tag">PostgreSQL</span>
+            <span class="tag">DBA</span>
             <button class="read-btn" data-id="1">Read Note →</button>
           </div>
         </article>
 
         <!-- Article Card 2 -->
-        <article class="idea-card" data-category="Go">
+        <article class="idea-card" data-category="K8s">
           <div class="idea-meta">
             <span class="idea-date">Aug 2026</span>
             <span class="idea-read">7 min read</span>
           </div>
-          <h3 class="idea-title">Building Resilient Microservices with Go Routines & Channels</h3>
-          <p class="idea-snippet">Designing non-blocking worker pools, graceful shutdown signals, and context cancellation patterns in production Go services.</p>
+          <h3 class="idea-title">Deploying Crunchy Postgres on Kubernetes Clusters</h3>
+          <p class="idea-snippet">Managing production databases on Kubernetes using Crunchy PGO operator, StatefulSets, pgBackRest backups, and auto-failover.</p>
           <div class="idea-footer">
-            <span class="tag">Go</span>
-            <span class="tag">Concurrency</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Crunchy Postgres</span>
             <button class="read-btn" data-id="2">Read Note →</button>
           </div>
         </article>
 
         <!-- Article Card 3 -->
-        <article class="idea-card" data-category="AI">
+        <article class="idea-card" data-category="Go">
           <div class="idea-meta">
             <span class="idea-date">Aug 2026</span>
             <span class="idea-read">6 min read</span>
           </div>
-          <h3 class="idea-title">AST-Driven SQL Refactoring for LLM Query Optimizers</h3>
-          <p class="idea-snippet">Combining Abstract Syntax Tree (AST) static analysis with LLM prompt context to guarantee safe query rewrites without semantic drift.</p>
+          <h3 class="idea-title">Building Resilient Microservices with Go Routines & Channels</h3>
+          <p class="idea-snippet">Designing non-blocking worker pools, graceful shutdown signals, and context cancellation patterns in production Go services.</p>
           <div class="idea-footer">
-            <span class="tag">AI</span>
-            <span class="tag">AST</span>
+            <span class="tag">Go</span>
+            <span class="tag">Microservices</span>
             <button class="read-btn" data-id="3">Read Note →</button>
           </div>
         </article>
@@ -369,12 +369,12 @@
           <div class="section-tag">[04] GET IN TOUCH</div>
           <h2 class="section-title">Collaborate with knishad.labs</h2>
           <p class="contact-text">
-            Interested in database optimization, backend systems, or R&D collaboration? Send a direct message to the lab.
+            Interested in PostgreSQL DBA, Kubernetes database deployment, Linux infrastructure, or Go microservices? Send a direct message to the lab.
           </p>
           <div class="contact-details">
             <div class="detail-item">
               <span class="detail-label">Focus Areas:</span>
-              <span class="detail-val">Database Systems, Go Backend & AI Tools</span>
+              <span class="detail-val">PostgreSQL DBA, Kubernetes Databases, Linux & Go</span>
             </div>
             <div class="detail-item">
               <span class="detail-label">GitHub:</span>
@@ -395,7 +395,7 @@
           </div>
           <div class="form-group">
             <label for="contactMessage">Message / Project Inquiry</label>
-            <textarea id="contactMessage" required rows="4" placeholder="Describe your database challenge, system architecture, or project idea..." class="form-input"></textarea>
+            <textarea id="contactMessage" required rows="4" placeholder="Describe your database challenge, Kubernetes cluster, or project idea..." class="form-input"></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Send Note to Lab →</button>
           <div id="formFeedback" class="form-feedback hidden"></div>
@@ -408,7 +408,7 @@
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-left">
-        <span class="brand-name">knishad.labs</span> — Personal R&D Platform
+        <span class="brand-name">knishad.labs</span> — PostgreSQL DBA & Systems Platform
       </div>
       <div class="footer-right">
         <span>© 2026 Kamal Nishad. Built with HTML, CSS & JS.</span>
