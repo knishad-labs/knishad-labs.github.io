@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
-  <title>PostgreSQL DBA Course & Production Field Guide — knishad.labs</title>
-  <meta name="description" content="Complete PostgreSQL DBA & Performance Architecture Course by Kamal Nishad. PostgreSQL internals, B-Tree indexing, autovacuum tuning, and replication.">
+  <title>PostgreSQL DBA & Kubernetes Course — knishad.labs</title>
+  <meta name="description" content="Complete PostgreSQL DBA Course by Kamal Nishad featuring 2 distinct tracks: Simple/Bare-Metal PostgreSQL DBA and PostgreSQL on Kubernetes (Cloud-Native).">
   
   <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,52 +49,52 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
-      <div class="tag-badge">POSTGRESQL DBA COURSE & FIELD GUIDE</div>
-      <h1 class="hero-title">PostgreSQL DBA & Performance Architecture</h1>
+      <div class="tag-badge">POSTGRESQL DBA & KUBERNETES COURSE</div>
+      <h1 class="hero-title">PostgreSQL DBA & Systems Architecture</h1>
       <p class="hero-subtitle">
-        A comprehensive production-grade course and field guide covering PostgreSQL internals, query performance tuning, index architecture, autovacuum maintenance, and high-availability replication — <strong>Engineered & Authored by Kamal Nishad</strong>.
+        A comprehensive course divided into <strong>2 Specialized Production Tracks</strong>: Bare-Metal PostgreSQL DBA Administration and PostgreSQL on Kubernetes (Cloud-Native) — <strong>Engineered & Authored by Kamal Nishad</strong>.
       </p>
 
       <div class="hero-actions">
-        <a href="#syllabus" class="btn btn-primary">Explore Course Syllabus ↓</a>
-        <a href="../index.html#contact" class="btn btn-secondary">Contact / Join DBA Cohort</a>
+        <a href="#track1" class="btn btn-primary">Track 1: Bare-Metal Postgres ↓</a>
+        <a href="#track2" class="btn btn-secondary">Track 2: Postgres on K8s ↓</a>
       </div>
 
       <div class="hero-metrics">
         <div class="metric-card">
-          <div class="metric-value">4 Modules</div>
-          <div class="metric-label">Structured Syllabus</div>
+          <div class="metric-value">Track 01</div>
+          <div class="metric-label">Bare-Metal PostgreSQL DBA</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">Track 02</div>
+          <div class="metric-label">PostgreSQL on Kubernetes</div>
         </div>
         <div class="metric-card">
           <div class="metric-value">PostgreSQL 16</div>
           <div class="metric-label">Production Engine</div>
         </div>
-        <div class="metric-card">
-          <div class="metric-value">Hands-on</div>
-          <div class="metric-label">DBA Scripts & Runbooks</div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Course Syllabus Section -->
-  <section id="syllabus" class="section">
+  <!-- Track 1: Simple / Bare-Metal PostgreSQL DBA -->
+  <section id="track1" class="section">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">[COURSE SYLLABUS]</div>
-        <h2 class="section-title">Structured Learning Modules</h2>
-        <p class="section-desc">From core database process architecture to emergency production incident response.</p>
+        <div class="section-tag">[TRACK 01 • BARE-METAL & VM]</div>
+        <h2 class="section-title">1. Simple & Bare-Metal PostgreSQL DBA Track</h2>
+        <p class="section-desc">Core PostgreSQL administration, performance tuning, locks, autovacuum, and physical streaming replication on Linux servers.</p>
       </div>
 
       <div class="projects-grid">
-        <!-- Module 1 -->
+        <!-- Module 1.1 -->
         <div class="project-card">
           <div class="project-header">
             <span class="project-icon">⚙️</span>
-            <span class="project-type">Module 01</span>
+            <span class="project-type">Module 1.1</span>
           </div>
           <h3 class="project-title">PostgreSQL Internals & Memory Architecture</h3>
-          <p class="project-desc">Understanding backend process architecture, Shared Buffers, Write-Ahead Logging (WAL), checkpointing, and page-level storage layout.</p>
+          <p class="project-desc">Backend process architecture, Shared Buffers tuning, Write-Ahead Logging (WAL), checkpointing, and page-level disk layout.</p>
           <div class="project-tags">
             <span class="tag">Shared Buffers</span>
             <span class="tag">WAL Engine</span>
@@ -102,14 +102,14 @@
           </div>
         </div>
 
-        <!-- Module 2 -->
+        <!-- Module 1.2 -->
         <div class="project-card">
           <div class="project-header">
             <span class="project-icon">🔍</span>
-            <span class="project-type">Module 02</span>
+            <span class="project-type">Module 1.2</span>
           </div>
-          <h3 class="project-title">Index Architecture & Sequential Scan Elimination</h3>
-          <p class="project-desc">Mastering B-Tree, GIN, and GiST indexes. Designing composite index column ordering, partial indexes, and analyzing EXPLAIN ANALYZE execution plans.</p>
+          <h3 class="project-title">B-Tree Indexing & Query Performance</h3>
+          <p class="project-desc">B-Tree index mechanics, composite column ordering, partial indexes, sequential scan elimination, and EXPLAIN ANALYZE plan diagnostics.</p>
           <div class="project-tags">
             <span class="tag">B-Tree Indexes</span>
             <span class="tag">Partial Index</span>
@@ -117,33 +117,76 @@
           </div>
         </div>
 
-        <!-- Module 3 -->
+        <!-- Module 1.3 -->
         <div class="project-card">
           <div class="project-header">
             <span class="project-icon">🛠️</span>
-            <span class="project-type">Module 03</span>
+            <span class="project-type">Module 1.3</span>
           </div>
-          <h3 class="project-title">Autovacuum Tuning, Locks & Wraparound Emergency</h3>
-          <p class="project-desc">Managing table bloat, autovacuum scale factors, lock tree analysis (pg_locks), and handling Transaction ID (XID) wraparound emergencies.</p>
+          <h3 class="project-title">Autovacuum, Locks & Emergency Runbooks</h3>
+          <p class="project-desc">Managing table bloat, scale factor parameters, pg_locks tree diagnostics, and handling Transaction ID (XID) wraparound emergencies.</p>
           <div class="project-tags">
             <span class="tag">Autovacuum</span>
             <span class="tag">pg_locks</span>
             <span class="tag">XID Wraparound</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Module 4 -->
+  <!-- Track 2: PostgreSQL on Kubernetes -->
+  <section id="track2" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">[TRACK 02 • CLOUD-NATIVE K8S]</div>
+        <h2 class="section-title">2. PostgreSQL on Kubernetes (Cloud-Native) Track</h2>
+        <p class="section-desc">Containerized PostgreSQL cluster management, Crunchy PGO operators, StatefulSets, pgBackRest S3 backups, and zero-downtime failover.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Module 2.1 -->
         <div class="project-card">
           <div class="project-header">
-            <span class="project-icon">🔄</span>
-            <span class="project-type">Module 04</span>
+            <span class="project-icon">📦</span>
+            <span class="project-type">Module 2.1</span>
           </div>
-          <h3 class="project-title">Replication, High Availability & Disaster Recovery</h3>
-          <p class="project-desc">Configuring physical streaming replication, synchronous vs asynchronous modes, Patroni failover clusters, and pgBackRest point-in-time recovery (PITR).</p>
+          <h3 class="project-title">StatefulSets, PVC Storage & IOPS Tuning</h3>
+          <p class="project-desc">Configuring Kubernetes StatefulSets, PersistentVolumeClaims (PVC), storage classes, and preventing disk I/O bottlenecks under heavy database traffic.</p>
           <div class="project-tags">
-            <span class="tag">Streaming Replication</span>
-            <span class="tag">Patroni</span>
+            <span class="tag">StatefulSets</span>
+            <span class="tag">PVC Storage</span>
+            <span class="tag">IOPS Tuning</span>
+          </div>
+        </div>
+
+        <!-- Module 2.2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">☸️</span>
+            <span class="project-type">Module 2.2</span>
+          </div>
+          <h3 class="project-title">Crunchy Postgres PGO Operator & CRDs</h3>
+          <p class="project-desc">Installing Crunchy Data PGO operator v5+. Declarative PostgreSQL cluster manifests (PostgresCluster CRD) and PgBouncer connection pooling.</p>
+          <div class="project-tags">
+            <span class="tag">Crunchy PGO</span>
+            <span class="tag">CRD Manifests</span>
+            <span class="tag">PgBouncer</span>
+          </div>
+        </div>
+
+        <!-- Module 2.3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">💾</span>
+            <span class="project-type">Module 2.3</span>
+          </div>
+          <h3 class="project-title">pgBackRest S3 Backups & Auto-Failover</h3>
+          <p class="project-desc">Configuring pgBackRest cloud object storage backups, Point-in-Time Recovery (PITR), and testing automated primary node failover in K8s.</p>
+          <div class="project-tags">
             <span class="tag">pgBackRest</span>
+            <span class="tag">S3 Backups</span>
+            <span class="tag">Auto-Failover</span>
           </div>
         </div>
       </div>
