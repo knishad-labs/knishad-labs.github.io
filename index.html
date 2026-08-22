@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>knishad.lab — Research & Development</title>
+  <meta name="description" content="knishad.lab — Research & Development in Systems, AI Query Optimization, and Software Engineering by Kamal Nishad.">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Grid Pattern -->
+  <div class="bg-grid"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">knishad.lab</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#sandbox" class="nav-item"><span>[01]</span> Sandbox</a>
+        <a href="#projects" class="nav-item"><span>[02]</span> R&D Projects</a>
+        <a href="#ideas" class="nav-item"><span>[03]</span> Ideas & Notes</a>
+        <a href="#contact" class="nav-item"><span>[04]</span> Contact</a>
+      </nav>
+
+      <div class="status-badge">
+        <span class="pulse-dot"></span>
+        <span class="status-text">R&D Active</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="tag-badge">RESEARCH & DEVELOPMENT</div>
+      <h1 class="hero-title">Engineering Intelligent Systems & High-Performance Tools.</h1>
+      <p class="hero-subtitle">
+        Exploring AI-driven query optimization, distributed Go backend microservices, and experimental algorithms.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#sandbox" class="btn btn-primary">Try Live SQL Sandbox ↓</a>
+        <a href="#projects" class="btn btn-secondary">Explore Research Projects</a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <div class="metric-value">4+</div>
+          <div class="metric-label">Microservices</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">&lt; 50ms</div>
+          <div class="metric-label">Target Latency</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">100%</div>
+          <div class="metric-label">Monochrome Simplicity</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [01] Live SQL Sandbox Section -->
+  <section id="sandbox" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">[01] INTERACTIVE DEMO</div>
+        <h2 class="section-title">AI Query Optimizer Studio</h2>
+        <p class="section-desc">Paste an unoptimized SQL query below to test our client-side AI analysis engine in real-time.</p>
+      </div>
+
+      <div class="sandbox-wrapper">
+        <!-- Editor Controls -->
+        <div class="sandbox-toolbar">
+          <div class="dialect-selector">
+            <label for="sqlDialect">Dialect:</label>
+            <select id="sqlDialect" class="custom-select">
+              <option value="postgresql">PostgreSQL</option>
+              <option value="mysql">MySQL</option>
+              <option value="sqlite">SQLite</option>
+            </select>
+          </div>
+
+          <div class="preset-buttons">
+            <span class="preset-label">Presets:</span>
+            <button class="preset-btn" data-preset="unindexed">Unindexed Join</button>
+            <button class="preset-btn" data-preset="wildcard">Wildcard SELECT *</button>
+            <button class="preset-btn" data-preset="groupby">Heavy GROUP BY</button>
+            <button class="preset-btn" data-preset="subquery">Subquery to CTE</button>
+          </div>
+        </div>
+
+        <!-- Editor Inputs & Results Grid -->
+        <div class="sandbox-grid">
+          <!-- Left: Input Area -->
+          <div class="sandbox-col">
+            <div class="panel-header">
+              <span class="panel-title">Original SQL Input</span>
+              <button id="formatSqlBtn" class="btn-sm">Format SQL</button>
+            </div>
+            <textarea id="sqlInput" class="code-editor" spellcheck="false" placeholder="SELECT * FROM users u JOIN orders o ON u.id = o.user_id WHERE u.status = 'active';"></textarea>
+            
+            <div class="editor-actions">
+              <button id="optimizeBtn" class="btn btn-primary btn-block">
+                <span>⚡ Run AI Optimizer</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Analysis Output -->
+          <div class="sandbox-col">
+            <div class="panel-header">
+              <span class="panel-title">Optimization Report</span>
+              <span id="scoreBadge" class="score-badge score-low">Health: 42/100</span>
+            </div>
+
+            <div id="resultsContainer" class="results-container">
+              <!-- Default Prompt State -->
+              <div id="emptyState" class="empty-state">
+                <div class="empty-icon">🔍</div>
+                <p>Click "Run AI Optimizer" to generate health scores, optimized SQL variations, execution plan visualizer, and index recommendations.</p>
+              </div>
+
+              <!-- Output Results (Hidden by default) -->
+              <div id="outputContent" class="output-content hidden">
+                
+                <!-- Performance Impact Cards -->
+                <div class="impact-grid">
+                  <div class="impact-card">
+                    <span class="impact-label">Est. Speedup</span>
+                    <span id="speedupVal" class="impact-val text-green">3.8x Faster</span>
+                  </div>
+                  <div class="impact-card">
+                    <span class="impact-label">I/O Reduction</span>
+                    <span id="ioVal" class="impact-val text-white">82% Savings</span>
+                  </div>
+                  <div class="impact-card">
+                    <span class="impact-label">Health Delta</span>
+                    <span id="healthDeltaVal" class="impact-val text-green">+54 Points</span>
+                  </div>
+                </div>
+
+                <!-- Tabs: Diff View vs Execution Plan -->
+                <div class="output-tabs">
+                  <button class="tab-btn active" data-tab="sqlDiff">Optimized SQL Diff</button>
+                  <button class="tab-btn" data-tab="plan">Execution Plan Graph</button>
+                  <button class="tab-btn" data-tab="indexes">Recommended Indexes</button>
+                </div>
+
+                <!-- Tab Content 1: SQL Diff -->
+                <div id="tabSqlDiff" class="tab-pane active">
+                  <div class="diff-box">
+                    <div class="diff-header">
+                      <span>Refactored Query</span>
+                      <button id="copySqlBtn" class="btn-sm">Copy SQL</button>
+                    </div>
+                    <pre><code id="optimizedSqlCode" class="code-block"></code></pre>
+                  </div>
+                </div>
+
+                <!-- Tab Content 2: Plan Graph -->
+                <div id="tabPlan" class="tab-pane hidden">
+                  <div class="plan-graph">
+                    <div id="planNodes" class="plan-tree"></div>
+                  </div>
+                </div>
+
+                <!-- Tab Content 3: Recommended Indexes -->
+                <div id="tabIndexes" class="tab-pane hidden">
+                  <div class="index-recommendations">
+                    <p class="recommendation-desc">Recommended DDL index statements to eliminate sequential table scans:</p>
+                    <pre><code id="indexDDLCode" class="code-block text-accent"></code></pre>
+                  </div>
+                </div>
+
+                <!-- AI Explanations List -->
+                <div class="explanations-box">
+                  <div class="box-title">Key Optimizations Applied</div>
+                  <ul id="explanationsList" class="explanation-list"></ul>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- [02] R&D Projects Showcase -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">[02] RESEARCH & PROJECTS</div>
+        <h2 class="section-title">Open Systems & Architecture</h2>
+        <p class="section-desc">Selected microservices, database engine tools, and distributed frameworks from the lab.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">⚡</span>
+            <span class="project-type">AI Tooling</span>
+          </div>
+          <h3 class="project-title">AI Query Optimizer</h3>
+          <p class="project-desc">Intelligent database query optimization engine using AST parsing, indexing heuristics, and execution plan simulation.</p>
+          <div class="project-tags">
+            <span class="tag">Go</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">AI/LLM</span>
+            <span class="tag">SQL Parsing</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/KamalToNishad/ai-query-optomizer" target="_blank" rel="noopener" class="project-link">View Repository →</a>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🔄</span>
+            <span class="project-type">Microservice</span>
+          </div>
+          <h3 class="project-title">Scheduler Service</h3>
+          <p class="project-desc">Distributed task scheduling service written in Go for managing cron jobs, one-shot timers, and distributed locks.</p>
+          <div class="project-tags">
+            <span class="tag">Go</span>
+            <span class="tag">Distributed Systems</span>
+            <span class="tag">Cron</span>
+            <span class="tag">gRPC</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/KamalToNishad/ai-query-optomizer/tree/main/backend/scheduler-service" target="_blank" rel="noopener" class="project-link">Explore Code →</a>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">⚙️</span>
+            <span class="project-type">Infrastructure</span>
+          </div>
+          <h3 class="project-title">Config Manager</h3>
+          <p class="project-desc">Centralized configuration management microservice featuring dynamic reload, encrypted secrets, and environment profiles.</p>
+          <div class="project-tags">
+            <span class="tag">Go</span>
+            <span class="tag">Security</span>
+            <span class="tag">JSON/YAML</span>
+            <span class="tag">REST API</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/KamalToNishad/ai-query-optomizer/tree/main/backend/config-service" target="_blank" rel="noopener" class="project-link">Explore Code →</a>
+          </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">🔔</span>
+            <span class="project-type">Communication</span>
+          </div>
+          <h3 class="project-title">Notification Gateway</h3>
+          <p class="project-desc">High-throughput notification dispatch service for Webhooks, Emails, and real-time WebSocket alerts.</p>
+          <div class="project-tags">
+            <span class="tag">Go</span>
+            <span class="tag">WebSockets</span>
+            <span class="tag">Concurrency</span>
+            <span class="tag">Queues</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/KamalToNishad/ai-query-optomizer/tree/main/backend/notification-service" target="_blank" rel="noopener" class="project-link">Explore Code →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [03] Ideas & Research Notes -->
+  <section id="ideas" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">[03] IDEAS & RESEARCH</div>
+        <h2 class="section-title">Technical Notes & Thoughts</h2>
+        <p class="section-desc">Articles, database insights, and system design patterns from R&D explorations.</p>
+      </div>
+
+      <!-- Search & Filter Controls -->
+      <div class="filter-bar">
+        <input type="text" id="ideaSearchInput" class="search-input" placeholder="Search ideas or keywords (e.g. PostgreSQL, Indexing, Go)...">
+        <div class="filter-tags">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="SQL">SQL & DB</button>
+          <button class="filter-btn" data-filter="Go">Go & Systems</button>
+          <button class="filter-btn" data-filter="AI">AI Architecture</button>
+        </div>
+      </div>
+
+      <!-- Articles Grid -->
+      <div id="ideasGrid" class="ideas-grid">
+        <!-- Article Card 1 -->
+        <article class="idea-card" data-category="SQL">
+          <div class="idea-meta">
+            <span class="idea-date">Aug 2026</span>
+            <span class="idea-read">5 min read</span>
+          </div>
+          <h3 class="idea-title">Eliminating Sequential Scans in PostgreSQL at Scale</h3>
+          <p class="idea-snippet">Understanding B-Tree indexing, composite index ordering, and partial indexes to boost query execution speed by 10x.</p>
+          <div class="idea-footer">
+            <span class="tag">SQL</span>
+            <span class="tag">PostgreSQL</span>
+            <button class="read-btn" data-id="1">Read Note →</button>
+          </div>
+        </article>
+
+        <!-- Article Card 2 -->
+        <article class="idea-card" data-category="Go">
+          <div class="idea-meta">
+            <span class="idea-date">Aug 2026</span>
+            <span class="idea-read">7 min read</span>
+          </div>
+          <h3 class="idea-title">Building Resilient Microservices with Go Routines & Channels</h3>
+          <p class="idea-snippet">Designing non-blocking worker pools, graceful shutdown signals, and context cancellation patterns in production Go services.</p>
+          <div class="idea-footer">
+            <span class="tag">Go</span>
+            <span class="tag">Concurrency</span>
+            <button class="read-btn" data-id="2">Read Note →</button>
+          </div>
+        </article>
+
+        <!-- Article Card 3 -->
+        <article class="idea-card" data-category="AI">
+          <div class="idea-meta">
+            <span class="idea-date">Aug 2026</span>
+            <span class="idea-read">6 min read</span>
+          </div>
+          <h3 class="idea-title">AST-Driven SQL Refactoring for LLM Query Optimizers</h3>
+          <p class="idea-snippet">Combining Abstract Syntax Tree (AST) static analysis with LLM prompt context to guarantee safe query rewrites without semantic drift.</p>
+          <div class="idea-footer">
+            <span class="tag">AI</span>
+            <span class="tag">AST</span>
+            <button class="read-btn" data-id="3">Read Note →</button>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- [04] Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="section-tag">[04] GET IN TOUCH</div>
+          <h2 class="section-title">Collaborate with knishad.lab</h2>
+          <p class="contact-text">
+            Interested in R&D collaborations, system optimization, or open-source software? Send a direct note to the lab.
+          </p>
+          <div class="contact-details">
+            <div class="detail-item">
+              <span class="detail-label">Location:</span>
+              <span class="detail-val">Remote / Open to Collaboration</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">GitHub:</span>
+              <a href="https://github.com/KamalToNishad" target="_blank" rel="noopener" class="detail-val link-underline">github.com/KamalToNishad</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Form -->
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="contactName">Your Name</label>
+            <input type="text" id="contactName" required placeholder="Jane Doe" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Your Email</label>
+            <input type="email" id="contactEmail" required placeholder="jane@example.com" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message / Idea</label>
+            <textarea id="contactMessage" required rows="4" placeholder="Let's build something awesome together..." class="form-input"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Note to Lab →</button>
+          <div id="formFeedback" class="form-feedback hidden"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="brand-name">knishad.lab</span> — Monochrome R&D Platform
+      </div>
+      <div class="footer-right">
+        <span>© 2026 Kamal Nishad. Built with HTML, CSS & JS.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reader Modal -->
+  <div id="readerModal" class="modal hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-box">
+      <button id="closeModalBtn" class="modal-close">✕</button>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
