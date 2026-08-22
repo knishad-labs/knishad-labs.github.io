@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Databases on Kubernetes Course & Field Guide — knishad.labs</title>
+  <meta name="description" content="Databases on Kubernetes Course by Kamal Nishad. Deploying Cloud-Native PostgreSQL, Crunchy PGO operator, StatefulSets, and Multi-Database clusters on Kubernetes.">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main CSS Stylesheet -->
+  <link rel="stylesheet" href="../styles.css?v=300">
+</head>
+<body>
+
+  <!-- Background Grid Pattern -->
+  <div class="bg-grid"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">knishad.labs</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="../index.html#courses" class="nav-item">← Back to Courses & Guides</a>
+      </nav>
+
+      <div class="nav-right">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Theme">
+          <span id="themeIcon">☀️</span>
+          <span id="themeText">Light</span>
+        </button>
+
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span class="status-text">R&D Active</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="tag-badge">CLOUD-NATIVE KUBERNETES DATABASES</div>
+      <h1 class="hero-title">Databases on Kubernetes</h1>
+      <p class="hero-subtitle">
+        A production-grade course on running high-availability database clusters on Kubernetes (PostgreSQL, Crunchy Postgres, and Multi-DB Operators), StatefulSets, pgBackRest backups, and auto-failover — <strong>Engineered & Authored by Kamal Nishad</strong>.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#syllabus" class="btn btn-primary">Explore Course Syllabus ↓</a>
+        <a href="../index.html#contact" class="btn btn-secondary">Contact / Inquire K8s Setup</a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <div class="metric-value">K8s DBs</div>
+          <div class="metric-label">Postgres & Multi-DBs</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">Operators</div>
+          <div class="metric-label">Crunchy PGO & StatefulSets</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">Zero-Downtime</div>
+          <div class="metric-label">Failover & Storage IOPS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Syllabus Section -->
+  <section id="syllabus" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">[COURSE SYLLABUS]</div>
+        <h2 class="section-title">Kubernetes Database Modules</h2>
+        <p class="section-desc">From Kubernetes StatefulSet storage classes to enterprise Crunchy PGO operator & multi-database deployments.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Module 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">📦</span>
+            <span class="project-type">Module 01</span>
+          </div>
+          <h3 class="project-title">StatefulSets, PVCs & High-IOPS Storage</h3>
+          <p class="project-desc">Understanding Kubernetes StatefulSet lifecycle, PersistentVolumeClaims (PVC), storage classes, and preventing disk I/O bottlenecks for database workloads.</p>
+          <div class="project-tags">
+            <span class="tag">StatefulSets</span>
+            <span class="tag">PVC Storage</span>
+            <span class="tag">IOPS Tuning</span>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">☸️</span>
+            <span class="project-type">Module 02</span>
+          </div>
+          <h3 class="project-title">Crunchy Postgres & K8s Database Operators</h3>
+          <p class="project-desc">Installing and configuring Crunchy Data PGO operator v5+. Declarative PostgreSQL cluster custom resources (PostgresCluster CRD) and connection pooling with PgBouncer.</p>
+          <div class="project-tags">
+            <span class="tag">Crunchy PGO</span>
+            <span class="tag">CRD</span>
+            <span class="tag">PgBouncer</span>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">💾</span>
+            <span class="project-type">Module 03</span>
+          </div>
+          <h3 class="project-title">Automated Backups & Disaster Recovery</h3>
+          <p class="project-desc">Configuring pgBackRest S3/GCS cloud object storage backups, delta backups, and performing Point-in-Time Recovery (PITR) directly in Kubernetes.</p>
+          <div class="project-tags">
+            <span class="tag">pgBackRest</span>
+            <span class="tag">S3 Backups</span>
+            <span class="tag">PITR Recovery</span>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-icon">⚡</span>
+            <span class="project-type">Module 04</span>
+          </div>
+          <h3 class="project-title">Automated Failover & Zero-Downtime Upgrades</h3>
+          <p class="project-desc">Testing automated primary node failure scenarios, standby cluster promotion, health probes, and rolling database version upgrades on K8s.</p>
+          <div class="project-tags">
+            <span class="tag">Auto-Failover</span>
+            <span class="tag">Rolling Upgrade</span>
+            <span class="tag">Health Probes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="brand-name">knishad.labs</span> — PostgreSQL DBA & Systems Platform
+      </div>
+      <div class="footer-right">
+        <span>© 2026 Kamal Nishad. Built with HTML, CSS & JS.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../app.js?v=300"></script>
+</body>
+</html>
