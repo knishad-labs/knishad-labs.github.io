@@ -79,28 +79,9 @@ html, body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
-.bg-grid {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--bg-primary);
-  background-image: 
-    linear-gradient(to right, rgba(120, 120, 120, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(120, 120, 120, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  position: relative;
-  z-index: 1;
+html.light .bg-grid {
+  background-image: none !important;
+  background-color: #ffffff !important;
 }
 
 .navbar {
@@ -108,9 +89,6 @@ html, body {
   top: 0;
   width: 100%;
   background: var(--bg-primary);
-  opacity: 0.98;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   z-index: 100;
   padding: 0.75rem 0;
