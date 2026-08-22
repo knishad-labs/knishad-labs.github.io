@@ -77,6 +77,8 @@ html, body {
   min-height: 100vh;
   width: 100%;
   transition: background-color var(--transition-normal), color var(--transition-normal);
+  forced-color-adjust: none !important;
+  -webkit-print-color-adjust: exact !important;
 }
 
 .bg-grid {
