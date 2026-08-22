@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
-  <!-- CSS Stylesheet (Cache Busted) -->
-  <link rel="stylesheet" href="styles.css?v=3">
-
-  <!-- Inline Critical Pitch Black Theme Rules -->
-  <style>
-    html, body, .bg-grid {
-      background-color: #050505 !important;
-      background: #050505 !important;
-      color: #f4f4f6 !important;
-    }
-  </style>
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
@@ -42,9 +33,17 @@
         <a href="#contact" class="nav-item"><span>[03]</span> Contact</a>
       </nav>
 
-      <div class="status-badge">
-        <span class="pulse-dot"></span>
-        <span class="status-text">R&D Active</span>
+      <div class="nav-right">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Theme">
+          <span id="themeIcon">☀️</span>
+          <span id="themeText">Light</span>
+        </button>
+
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span class="status-text">R&D Active</span>
+        </div>
       </div>
     </div>
   </header>
