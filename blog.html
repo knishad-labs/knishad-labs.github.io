@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>DBA & Systems Engineering Blog — knishad.labs</title>
+  <meta name="description" content="Technical Blog by Kamal Nishad. Production PostgreSQL DBA retrospectives, Crunchy Postgres on Kubernetes guides, Linux tuning, and Go microservices.">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=500">
+</head>
+<body>
+
+  <!-- Background Grid Pattern -->
+  <div class="bg-grid"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-top-row">
+        <a href="index.html" class="brand">
+          <span class="brand-dot"></span>
+          <span class="brand-name">knishad.labs</span>
+        </a>
+
+        <div class="nav-right">
+          <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <span id="themeIcon">☀️</span>
+            <span id="themeText">Light</span>
+          </button>
+
+          <div class="status-badge">
+            <span class="pulse-dot"></span>
+            <span class="status-text">R&D Active</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html#projects" class="nav-item"><span>[01]</span> Projects</a>
+        <a href="blog.html" class="nav-item"><span>[02]</span> Blog</a>
+        <a href="index.html#courses" class="nav-item"><span>[03]</span> Courses & Guides</a>
+        <a href="index.html#contact" class="nav-item"><span>[04]</span> Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="tag-badge">DBA & SYSTEMS ENGINEERING BLOG</div>
+      <h1 class="hero-title">Technical Blog & Production Notes</h1>
+      <p class="hero-subtitle">
+        Deep technical articles, production incident retrospectives, PostgreSQL query tuning, Crunchy Postgres on Kubernetes, and Go concurrency — <strong>Authored by Kamal Nishad</strong>.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#articlesGrid" class="btn btn-primary">Browse Blog Articles ↓</a>
+        <a href="index.html#contact" class="btn btn-secondary">Subscribe / Contact Lab</a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <div class="metric-value">PostgreSQL</div>
+          <div class="metric-label">DBA & Performance</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">Kubernetes</div>
+          <div class="metric-label">Cloud-Native DBs</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">Linux & Go</div>
+          <div class="metric-label">Systems Engineering</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Articles Section -->
+  <section id="articlesGrid" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">[ALL BLOG POSTS]</div>
+        <h2 class="section-title">Production Articles & Field Notes</h2>
+        <p class="section-desc">Search and filter technical posts by category.</p>
+      </div>
+
+      <!-- Search & Filter Controls -->
+      <div class="filter-bar">
+        <input type="text" id="ideaSearchInput" class="search-input" placeholder="Search blog articles or keywords (e.g. Postgres, Kubernetes, Linux, Go)...">
+        <div class="filter-tags">
+          <button class="filter-btn active" data-filter="all">All Articles</button>
+          <button class="filter-btn" data-filter="SQL">PostgreSQL DBA</button>
+          <button class="filter-btn" data-filter="K8s">Kubernetes & Linux</button>
+          <button class="filter-btn" data-filter="Go">Go Microservices</button>
+        </div>
+      </div>
+
+      <!-- Articles Grid -->
+      <div id="ideasGrid" class="ideas-grid">
+        <!-- Article Card 1 -->
+        <article class="idea-card" data-category="SQL">
+          <div class="idea-meta">
+            <span class="idea-date">Aug 2026</span>
+            <span class="idea-read">5 min read</span>
+          </div>
+          <h3 class="idea-title">Eliminating Sequential Scans in PostgreSQL at Scale</h3>
+          <p class="idea-snippet">Understanding B-Tree indexing, composite index ordering, and partial indexes to boost query execution speed by 10x.</p>
+          <div class="idea-footer">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">DBA</span>
+            <a href="blog/eliminating-sequential-scans.html" class="project-link">Read Full Article →</a>
+          </div>
+        </article>
+
+        <!-- Article Card 2 -->
+        <article class="idea-card" data-category="K8s">
+          <div class="idea-meta">
+            <span class="idea-date">Aug 2026</span>
+            <span class="idea-read">7 min read</span>
+          </div>
+          <h3 class="idea-title">Deploying Crunchy Postgres on Kubernetes Clusters</h3>
+          <p class="idea-snippet">Managing production databases on Kubernetes using Crunchy PGO operator, StatefulSets, pgBackRest backups, and auto-failover.</p>
+          <div class="idea-footer">
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Crunchy Postgres</span>
+            <a href="blog/deploying-crunchy-postgres-k8s.html" class="project-link">Read Full Article →</a>
+          </div>
+        </article>
+
+        <!-- Article Card 3 -->
+        <article class="idea-card" data-category="Go">
+          <div class="idea-meta">
+            <span class="idea-date">Aug 2026</span>
+            <span class="idea-read">6 min read</span>
+          </div>
+          <h3 class="idea-title">Building Resilient Microservices with Go Routines & Channels</h3>
+          <p class="idea-snippet">Designing non-blocking worker pools, graceful shutdown signals, and context cancellation patterns in production Go services.</p>
+          <div class="idea-footer">
+            <span class="tag">Go</span>
+            <span class="tag">Microservices</span>
+            <a href="blog/building-resilient-go-microservices.html" class="project-link">Read Full Article →</a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="brand-name">knishad.labs</span> — PostgreSQL DBA & Systems Platform
+      </div>
+      <div class="footer-right">
+        <span>© 2026 Kamal Nishad. Built with HTML, CSS & JS.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="app.js?v=500"></script>
+</body>
+</html>

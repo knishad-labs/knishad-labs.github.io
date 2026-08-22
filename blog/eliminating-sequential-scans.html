@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Eliminating Sequential Scans in PostgreSQL at Scale — knishad.labs</title>
+  <meta name="description" content="Technical Article by Kamal Nishad. Understanding B-Tree indexing, composite index ordering, and partial indexes in PostgreSQL.">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main CSS Stylesheet -->
+  <link rel="stylesheet" href="../styles.css?v=500">
+</head>
+<body>
+
+  <!-- Background Grid Pattern -->
+  <div class="bg-grid"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-top-row">
+        <a href="../index.html" class="brand">
+          <span class="brand-dot"></span>
+          <span class="brand-name">knishad.labs</span>
+        </a>
+
+        <div class="nav-right">
+          <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <span id="themeIcon">☀️</span>
+            <span id="themeText">Light</span>
+          </button>
+
+          <div class="status-badge">
+            <span class="pulse-dot"></span>
+            <span class="status-text">R&D Active</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="../blog.html" class="nav-item">← Back to Blog Hub</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Article Detail Hero -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="tag-badge">POSTGRESQL DBA ARTICLE</div>
+      <h1 class="hero-title">Eliminating Sequential Scans in PostgreSQL at Scale</h1>
+      <p class="hero-subtitle">
+        Understanding B-Tree indexing, composite index ordering, partial indexes, and EXPLAIN ANALYZE execution plan diagnostics — <strong>Authored by Kamal Nishad</strong>.
+      </p>
+
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <div class="metric-value">Aug 2026</div>
+          <div class="metric-label">Published Date</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">5 Min</div>
+          <div class="metric-label">Read Time</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">10x Speedup</div>
+          <div class="metric-label">Performance Impact</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-wrapper" style="grid-template-columns: 1fr;">
+        <div class="contact-info">
+          <h2 style="margin-bottom: 1rem; color: var(--text-primary);">Why Sequential Scans Kill Database Performance</h2>
+          <p style="margin-bottom: 1.25rem; line-height: 1.8; color: var(--text-secondary);">
+            When a PostgreSQL table grows to millions of rows, executing a query without a matching index forces the query planner to perform a <code>Seq Scan</code> (Sequential Scan). This means reading every page on disk from start to finish, thrashing Shared Buffers and spiking CPU utilization to 100%.
+          </p>
+
+          <h3 style="margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">1. Analyzing the EXPLAIN ANALYZE Execution Plan</h3>
+          <p style="margin-bottom: 1.25rem; line-height: 1.8; color: var(--text-secondary);">
+            Before adding indexes, always run <code>EXPLAIN (ANALYZE, BUFFERS)</code>. Look for the <code>Seq Scan on table_name</code> node. Take note of the total cost and actual time spent reading disk pages.
+          </p>
+
+          <h3 style="margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">2. B-Tree Composite Index Ordering Rule</h3>
+          <p style="margin-bottom: 1.25rem; line-height: 1.8; color: var(--text-secondary);">
+            When creating multi-column indexes, place equality predicates (<code>status = 'ACTIVE'</code>) FIRST in the index definition, followed by range predicates (<code>created_at >= '2026-01-01'</code>).
+          </p>
+
+          <h3 style="margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">3. Partial Indexes for High-Cardinality Filtering</h3>
+          <p style="margin-bottom: 1.25rem; line-height: 1.8; color: var(--text-secondary);">
+            If 95% of your table rows have <code>status = 'PROCESSED'</code> and you only query <code>status = 'PENDING'</code>, build a Partial Index:
+          </p>
+          <pre style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 1rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.85rem; overflow-x: auto; color: var(--text-primary); margin-bottom: 1.5rem;"><code>CREATE INDEX idx_pending_jobs ON queue_jobs (created_at) WHERE status = 'PENDING';</code></pre>
+
+          <div style="border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: 2rem;">
+            <a href="../blog.html" class="btn btn-secondary">← Back to Blog Articles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="brand-name">knishad.labs</span> — PostgreSQL DBA & Systems Platform
+      </div>
+      <div class="footer-right">
+        <span>© 2026 Kamal Nishad. Built with HTML, CSS & JS.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../app.js?v=500"></script>
+</body>
+</html>
