@@ -2,20 +2,20 @@
   display: none !important;
 }
 
-/* Default Theme Tokens: Light Mode */
+/* Default Theme Tokens: Light Mode (Pure White) */
 :root, html.light {
   color-scheme: light !important;
   --bg-primary: #ffffff;
-  --bg-secondary: #f4f4f7;
+  --bg-secondary: #ffffff;
   --bg-card: #ffffff;
-  --bg-card-hover: #f0f0f4;
+  --bg-card-hover: #f9f9fb;
   
   --border-color: #e4e4e7;
   --border-light: #d4d4d8;
   --border-focus: #18181b;
   
   --text-primary: #09090b;
-  --text-secondary: #52525b;
+  --text-secondary: #3f3f46;
   --text-muted: #71717a;
   
   --accent-primary: #09090b;
