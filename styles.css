@@ -29,6 +29,11 @@
   --transition-normal: 0.25s ease;
 }
 
+html.light, html.light body, html.light .bg-grid {
+  background-color: #ffffff !important;
+  color: #09090b !important;
+}
+
 /* Dark Mode Tokens (Deep Pitch Black) */
 html.dark {
   color-scheme: dark !important;
