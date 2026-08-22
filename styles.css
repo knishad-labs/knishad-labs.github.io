@@ -29,13 +29,13 @@
   --transition-normal: 0.25s ease;
 }
 
-/* Dark Mode Tokens */
+/* Dark Mode Tokens (Deep Pitch Black) */
 html.dark {
   color-scheme: dark !important;
-  --bg-primary: #050505;
-  --bg-secondary: #0c0c0e;
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0c;
   --bg-card: #111114;
-  --bg-card-hover: #16161a;
+  --bg-card-hover: #18181c;
   
   --border-color: #222226;
   --border-light: #33333a;
@@ -46,8 +46,13 @@ html.dark {
   --text-muted: #71717a;
   
   --accent-primary: #ffffff;
-  --accent-inverse: #050505;
+  --accent-inverse: #000000;
   --accent-green: #10b981;
+}
+
+html.dark, html.dark body, html.dark .bg-grid {
+  background-color: #000000 !important;
+  color: #f4f4f6 !important;
 }
 
 *, *::before, *::after {
