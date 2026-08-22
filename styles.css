@@ -4,6 +4,7 @@
 
 /* Default Theme Tokens: Light Mode */
 :root, html.light {
+  color-scheme: light !important;
   --bg-primary: #ffffff;
   --bg-secondary: #f4f4f7;
   --bg-card: #ffffff;
@@ -30,6 +31,7 @@
 
 /* Dark Mode Tokens */
 html.dark {
+  color-scheme: dark !important;
   --bg-primary: #050505;
   --bg-secondary: #0c0c0e;
   --bg-card: #111114;
