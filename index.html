@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=11">
+  <link rel="stylesheet" href="styles.css?v=500">
 </head>
 <body>
 
@@ -23,30 +23,31 @@
   <!-- Header Navigation -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="#" class="brand">
-        <span class="brand-dot"></span>
-        <span class="brand-name">knishad.labs</span>
-      </a>
+      <div class="nav-top-row">
+        <a href="#" class="brand">
+          <span class="brand-dot"></span>
+          <span class="brand-name">knishad.labs</span>
+        </a>
+
+        <div class="nav-right">
+          <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <span id="themeIcon">☀️</span>
+            <span id="themeText">Light</span>
+          </button>
+
+          <div class="status-badge">
+            <span class="pulse-dot"></span>
+            <span class="status-text">R&D Active</span>
+          </div>
+        </div>
+      </div>
 
       <nav class="nav-links">
         <a href="#projects" class="nav-item"><span>[01]</span> Projects</a>
         <a href="#ideas" class="nav-item"><span>[02]</span> Notes</a>
-        <a href="#courses" class="nav-item"><span>[03]</span> Courses & Guides</a>
+        <a href="#courses" class="nav-item"><span>[03]</span> Courses</a>
         <a href="#contact" class="nav-item"><span>[04]</span> Contact</a>
       </nav>
-
-      <div class="nav-right">
-        <!-- Theme Toggle Button -->
-        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Theme">
-          <span id="themeIcon">☀️</span>
-          <span id="themeText">Light</span>
-        </button>
-
-        <div class="status-badge">
-          <span class="pulse-dot"></span>
-          <span class="status-text">R&D Active</span>
-        </div>
-      </div>
     </div>
   </header>
 
@@ -280,8 +281,8 @@
             <span class="project-icon">☸️</span>
             <span class="project-type">Kubernetes Course</span>
           </div>
-          <h3 class="project-title">Crunchy Postgres on Kubernetes (Cloud-Native DB)</h3>
-          <p class="project-desc">Production deployment manual for running high-availability PostgreSQL on Kubernetes using Crunchy Data PGO operator, StatefulSets, pgBackRest, and zero-downtime failover.</p>
+          <h3 class="project-title">Databases on Kubernetes (Cloud-Native DB)</h3>
+          <p class="project-desc">Production deployment manual for running high-availability PostgreSQL & Multi-DBs on Kubernetes using Crunchy Data PGO operator, StatefulSets, pgBackRest, and zero-downtime failover.</p>
           <div class="project-tags">
             <span class="tag">Kubernetes</span>
             <span class="tag">Crunchy PGO</span>
@@ -380,6 +381,6 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="app.js?v=300"></script>
+  <script src="app.js?v=500"></script>
 </body>
 </html>
