@@ -28,10 +28,9 @@
       </a>
 
       <nav class="nav-links">
-        <a href="#sandbox" class="nav-item"><span>[01]</span> Sandbox</a>
-        <a href="#projects" class="nav-item"><span>[02]</span> Projects</a>
-        <a href="#ideas" class="nav-item"><span>[03]</span> Notes & Ideas</a>
-        <a href="#contact" class="nav-item"><span>[04]</span> Contact</a>
+        <a href="#projects" class="nav-item"><span>[01]</span> Projects</a>
+        <a href="#ideas" class="nav-item"><span>[02]</span> Notes & Ideas</a>
+        <a href="#contact" class="nav-item"><span>[03]</span> Contact</a>
       </nav>
 
       <div class="status-badge">
@@ -51,8 +50,8 @@
       </p>
 
       <div class="hero-actions">
-        <a href="#sandbox" class="btn btn-primary">Try Live SQL Sandbox ↓</a>
-        <a href="#projects" class="btn btn-secondary">Explore Projects Showcase</a>
+        <a href="#projects" class="btn btn-primary">Explore Projects Showcase ↓</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
       </div>
 
       <div class="hero-metrics">
@@ -72,140 +71,11 @@
     </div>
   </section>
 
-  <!-- [01] Live SQL Sandbox Section -->
-  <section id="sandbox" class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">[01] INTERACTIVE DEMO</div>
-        <h2 class="section-title">AI Query Optimizer Studio</h2>
-        <p class="section-desc">Paste an unoptimized SQL query below to run instant client-side health diagnostics, AST refactoring, and index generation.</p>
-      </div>
-
-      <div class="sandbox-wrapper">
-        <!-- Editor Controls -->
-        <div class="sandbox-toolbar">
-          <div class="dialect-selector">
-            <label for="sqlDialect">Database:</label>
-            <select id="sqlDialect" class="custom-select">
-              <option value="postgresql">PostgreSQL</option>
-              <option value="mysql">MySQL</option>
-              <option value="sqlite">SQLite</option>
-            </select>
-          </div>
-
-          <div class="preset-buttons">
-            <span class="preset-label">Presets:</span>
-            <button class="preset-btn" data-preset="unindexed">Unindexed Join</button>
-            <button class="preset-btn" data-preset="wildcard">Wildcard SELECT *</button>
-            <button class="preset-btn" data-preset="groupby">Heavy GROUP BY</button>
-            <button class="preset-btn" data-preset="subquery">Subquery to CTE</button>
-          </div>
-        </div>
-
-        <!-- Editor Inputs & Results Grid -->
-        <div class="sandbox-grid">
-          <!-- Left: Input Area -->
-          <div class="sandbox-col">
-            <div class="panel-header">
-              <span class="panel-title">Original SQL Input</span>
-              <button id="formatSqlBtn" class="btn-sm">Format SQL</button>
-            </div>
-            <textarea id="sqlInput" class="code-editor" spellcheck="false" placeholder="SELECT * FROM users u JOIN orders o ON u.id = o.user_id WHERE u.status = 'active';"></textarea>
-            
-            <div class="editor-actions">
-              <button id="optimizeBtn" class="btn btn-primary btn-block">
-                <span>⚡ Run AI Optimizer</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Right: Analysis Output -->
-          <div class="sandbox-col">
-            <div class="panel-header">
-              <span class="panel-title">Diagnostic Report</span>
-              <span id="scoreBadge" class="score-badge score-low">Health: 42/100</span>
-            </div>
-
-            <div id="resultsContainer" class="results-container">
-              <!-- Default Prompt State -->
-              <div id="emptyState" class="empty-state">
-                <div class="empty-icon">🔍</div>
-                <p>Click "Run AI Optimizer" to generate health scores, optimized SQL variations, execution plan visualizers, and index recommendations.</p>
-              </div>
-
-              <!-- Output Results (Hidden by default) -->
-              <div id="outputContent" class="output-content hidden">
-                
-                <!-- Performance Impact Cards -->
-                <div class="impact-grid">
-                  <div class="impact-card">
-                    <span class="impact-label">Est. Speedup</span>
-                    <span id="speedupVal" class="impact-val text-green">3.8x Faster</span>
-                  </div>
-                  <div class="impact-card">
-                    <span class="impact-label">I/O Savings</span>
-                    <span id="ioVal" class="impact-val text-white">82% Savings</span>
-                  </div>
-                  <div class="impact-card">
-                    <span class="impact-label">Health Delta</span>
-                    <span id="healthDeltaVal" class="impact-val text-green">+54 Points</span>
-                  </div>
-                </div>
-
-                <!-- Tabs: Diff View vs Execution Plan -->
-                <div class="output-tabs">
-                  <button class="tab-btn active" data-tab="sqlDiff">Optimized SQL Diff</button>
-                  <button class="tab-btn" data-tab="plan">Execution Plan Graph</button>
-                  <button class="tab-btn" data-tab="indexes">Recommended Indexes</button>
-                </div>
-
-                <!-- Tab Content 1: SQL Diff -->
-                <div id="tabSqlDiff" class="tab-pane active">
-                  <div class="diff-box">
-                    <div class="diff-header">
-                      <span>Refactored Query</span>
-                      <button id="copySqlBtn" class="btn-sm">Copy SQL</button>
-                    </div>
-                    <pre><code id="optimizedSqlCode" class="code-block"></code></pre>
-                  </div>
-                </div>
-
-                <!-- Tab Content 2: Plan Graph -->
-                <div id="tabPlan" class="tab-pane hidden">
-                  <div class="plan-graph">
-                    <div id="planNodes" class="plan-tree"></div>
-                  </div>
-                </div>
-
-                <!-- Tab Content 3: Recommended Indexes -->
-                <div id="tabIndexes" class="tab-pane hidden">
-                  <div class="index-recommendations">
-                    <p class="recommendation-desc">Recommended DDL index statements to eliminate sequential scans:</p>
-                    <pre><code id="indexDDLCode" class="code-block text-accent"></code></pre>
-                  </div>
-                </div>
-
-                <!-- AI Explanations List -->
-                <div class="explanations-box">
-                  <div class="box-title">Key Optimizations Applied</div>
-                  <ul id="explanationsList" class="explanation-list"></ul>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- [02] Projects Showcase -->
+  <!-- [01] Projects Showcase -->
   <section id="projects" class="section">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">[02] PROJECTS SHOWCASE</div>
+        <div class="section-tag">[01] PROJECTS SHOWCASE</div>
         <h2 class="section-title">Lab Projects & Systems</h2>
         <p class="section-desc">Selected microservices, database engine tools, and software frameworks built in the lab.</p>
       </div>
@@ -214,8 +84,8 @@
         <!-- Project Card 1 -->
         <div class="project-card">
           <div class="project-header">
-            <span class="project-icon">⚡</span>
-            <span class="project-type">AI & DB Tool</span>
+            <span class="project-icon">🐘</span>
+            <span class="project-type">DBA Tooling</span>
           </div>
           <h3 class="project-title">AI Query Optimizer</h3>
           <p class="project-desc">Intelligent database query optimization engine using AST parsing, indexing heuristics, and execution plan simulation.</p>
@@ -290,11 +160,11 @@
     </div>
   </section>
 
-  <!-- [03] Notes & Ideas Hub -->
+  <!-- [02] Notes & Ideas Hub -->
   <section id="ideas" class="section">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">[03] NOTES & IDEAS</div>
+        <div class="section-tag">[02] NOTES & IDEAS</div>
         <h2 class="section-title">Technical Notes & Field Guides</h2>
         <p class="section-desc">Articles on PostgreSQL DBA, Crunchy Postgres on Kubernetes, Linux tuning, and Go microservices.</p>
       </div>
@@ -361,12 +231,12 @@
     </div>
   </section>
 
-  <!-- [04] Contact Section -->
+  <!-- [03] Contact Section -->
   <section id="contact" class="section">
     <div class="container">
       <div class="contact-wrapper">
         <div class="contact-info">
-          <div class="section-tag">[04] GET IN TOUCH</div>
+          <div class="section-tag">[03] GET IN TOUCH</div>
           <h2 class="section-title">Collaborate with knishad.labs</h2>
           <p class="contact-text">
             Interested in PostgreSQL DBA, Kubernetes database deployment, Linux infrastructure, or Go microservices? Send a direct message to the lab.
